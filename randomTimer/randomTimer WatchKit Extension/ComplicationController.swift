@@ -41,8 +41,22 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        // Call the handler with the current timeline entry
-        handler(nil)
+        var entry: CLKComplicationTimelineEntry? = nil
+        
+        switch complication.family{
+        case .graphicCircular:
+           let template = CLKComplicationTemplateCircularSmallStackText(
+            line1TextProvider: CLKSimpleTextProvider(format: "12"),
+            line2TextProvider: CLKSimpleTextProvider(format: "12"))
+            
+            entry = CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template)
+            handler(entry)
+             
+        
+        default:
+    handler(nil)
+        }
+      
     }
     
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
@@ -53,7 +67,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Sample Templates
     
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
-        // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        switch complication.family{
+        case .graphicCircular:
+           let template = CLKComplicationTemplateGraphicCircularStackText(
+            line1TextProvider: CLKSimpleTextProvider(format: "12"),
+            line2TextProvider: CLKSimpleTextProvider(format: "12"))
+            handler(template)
+             
+        
+        default:
+    handler(nil)
+        }
     }
 }

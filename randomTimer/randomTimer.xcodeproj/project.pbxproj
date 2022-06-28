@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9541943F286963F00094C9E0 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9541943E286963F00094C9E0 /* Match.swift */; };
+		95419441286964A20094C9E0 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95419440286964A20094C9E0 /* Team.swift */; };
 		954DFC72286085ED00A25ED5 /* randomTimer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 954DFC71286085ED00A25ED5 /* randomTimer WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		954DFC77286085EE00A25ED5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954DFC76286085EE00A25ED5 /* Assets.xcassets */; };
 		954DFC7D286085EE00A25ED5 /* randomTimer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 954DFC7C286085EE00A25ED5 /* randomTimer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -65,6 +67,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9541943E286963F00094C9E0 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		95419440286964A20094C9E0 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		954DFC6D286085ED00A25ED5 /* randomTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = randomTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		954DFC71286085ED00A25ED5 /* randomTimer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "randomTimer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		954DFC76286085EE00A25ED5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		95419442286998750094C9E0 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				954DFC87286085EE00A25ED5 /* NotificationView.swift */,
+				954DFC85286085EE00A25ED5 /* NotificationController.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		954DFC66286085ED00A25ED5 = {
 			isa = PBXGroup;
 			children = (
@@ -124,11 +137,10 @@
 		954DFC80286085EE00A25ED5 /* randomTimer WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				95419442286998750094C9E0 /* Notification */,
 				954DFC9F286089F900A25ED5 /* Features */,
 				954DFC81286085EE00A25ED5 /* randomTimerApp.swift */,
 				954DFC83286085EE00A25ED5 /* ContentView.swift */,
-				954DFC85286085EE00A25ED5 /* NotificationController.swift */,
-				954DFC87286085EE00A25ED5 /* NotificationView.swift */,
 				954DFC89286085EE00A25ED5 /* ComplicationController.swift */,
 				954DFC8B286085EF00A25ED5 /* Assets.xcassets */,
 				954DFC90286085EF00A25ED5 /* Info.plist */,
@@ -160,6 +172,8 @@
 			children = (
 				954DFCA128608A2600A25ED5 /* ListView.swift */,
 				954DFCA628608D0000A25ED5 /* Flag.swift */,
+				9541943E286963F00094C9E0 /* Match.swift */,
+				95419440286964A20094C9E0 /* Team.swift */,
 			);
 			path = ListScreen;
 			sourceTree = "<group>";
@@ -301,11 +315,13 @@
 			files = (
 				954DFC86286085EE00A25ED5 /* NotificationController.swift in Sources */,
 				954DFC84286085EE00A25ED5 /* ContentView.swift in Sources */,
+				9541943F286963F00094C9E0 /* Match.swift in Sources */,
 				954DFCA228608A2600A25ED5 /* ListView.swift in Sources */,
 				954DFC8A286085EE00A25ED5 /* ComplicationController.swift in Sources */,
 				954DFCA528608A8700A25ED5 /* MatchView.swift in Sources */,
 				954DFC82286085EE00A25ED5 /* randomTimerApp.swift in Sources */,
 				954DFC88286085EE00A25ED5 /* NotificationView.swift in Sources */,
+				95419441286964A20094C9E0 /* Team.swift in Sources */,
 				954DFCA728608D0000A25ED5 /* Flag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
